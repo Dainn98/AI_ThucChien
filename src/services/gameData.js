@@ -318,30 +318,31 @@ export const level2DragAndDrop = {
 // Data for Level 3 - Spot the Difference
 export const level3SpotTheDifference = {
   title: "Màn 3: Siêu Thị Nhí",
-  backgroundImageUrl: "/assets/stage3.png", // Corrected path
-  correctImageUrl: "/assets/stage3_correct.png", // Corrected path
+  backgroundImageUrl: "/assets/stage3.png",
+  correctImageUrl: "/assets/stage3_correct.png", // This might need updating if there's a "correct" version
   timeLimit: 60, // seconds
   differences: [
     {
       id: "diff-1",
-      x: 15,
+      x: 25,
       y: 70,
-      radius: 8,
+      radius: 10,
       description:
         "Thịt sống được đặt ngay trên rau củ, có thể gây nhiễm khuẩn chéo.",
     },
     {
       id: "diff-2",
-      x: 50,
-      y: 80,
-      radius: 10,
-      description: "Hộp sữa bị phồng, dấu hiệu của việc thực phẩm đã bị hỏng.",
+      x: 60,
+      y: 48,
+      radius: 8,
+      description:
+        "Hộp sữa bị móp méo, dấu hiệu của việc thực phẩm đã bị hỏng.",
     },
     {
       id: "diff-3",
-      x: 85,
-      y: 65,
-      radius: 7,
+      x: 38,
+      y: 20,
+      radius: 5,
       description: "Trái cây bị dập nát, nấm mốc không nên mua.",
     },
     // Coordinates are percentages (top, left)

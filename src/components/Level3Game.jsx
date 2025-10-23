@@ -1,42 +1,45 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Modal, Progress } from "antd";
+import { Progress } from "antd";
 import { useNavigate } from "react-router-dom";
 import { level3SpotTheDifference as gameData } from "../services/gameData";
 
 const Level3Game = () => {
   const [foundDifferences, setFoundDifferences] = useState([]);
   const [timeLeft, setTimeLeft] = useState(gameData.timeLimit);
+  const [isGameEnd, setIsGameEnd] = useState(false);
   const imageRef = useRef(null);
+  const timerRef = useRef(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (timeLeft <= 0) {
-      Modal.error({
-        title: "Hết giờ!",
-        content: `Bạn chưa tìm thấy hết các điểm sai. Hãy thử lại nhé!`,
-        onOk: () => navigate("/levels"),
-      });
-      return;
-    }
+  const endGame = () => {
+    clearInterval(timerRef.current);
+    setIsGameEnd(true);
+  };
 
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => prev - 1);
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          endGame();
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, [timeLeft, navigate]);
+    return () => clearInterval(timerRef.current);
+  }, []);
 
   useEffect(() => {
     if (foundDifferences.length === gameData.differences.length) {
-      Modal.success({
-        title: "Xuất sắc! Bạn đã tìm ra tất cả điểm sai!",
-        content: `Bạn thật là một chuyên gia an toàn thực phẩm nhí!`,
-        onOk: () => navigate("/levels"),
-      });
+      endGame();
     }
-  }, [foundDifferences, navigate]);
+  }, [foundDifferences]);
 
   const handleImageClick = (event) => {
+    if (isGameEnd) return; // Don't allow clicks after game ends
+
     const rect = imageRef.current.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width) * 100;
     const y = ((event.clientY - rect.top) / rect.height) * 100;
@@ -52,6 +55,23 @@ const Level3Game = () => {
         setFoundDifferences([...foundDifferences, diff]);
       }
     });
+  };
+
+  const handleRetry = () => {
+    setFoundDifferences([]);
+    setTimeLeft(gameData.timeLimit);
+    setIsGameEnd(false);
+    // Restart timer
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          endGame();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
   };
 
   return (
@@ -99,6 +119,31 @@ const Level3Game = () => {
           ></div>
         ))}
       </div>
+
+      {/* End-of-level buttons */}
+      {isGameEnd && (
+        <div className="text-center mt-8">
+          <p className="text-xl font-bold mb-4">
+            {foundDifferences.length === gameData.differences.length
+              ? "Xuất sắc! Bạn đã tìm ra tất cả điểm sai!"
+              : "Hết giờ! Hãy thử lại nhé!"}
+          </p>
+          <div className="flex justify-center gap-4">
+            <button
+              onClick={handleRetry}
+              className="border-2 border-green-600 text-green-600 font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-green-600 hover:text-white transition-colors duration-300"
+            >
+              Thử lại
+            </button>
+            <button
+              onClick={() => navigate("/levels")}
+              className="border-2 border-blue-600 text-blue-600 font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-600 hover:text-white transition-colors duration-300"
+            >
+              Chọn màn
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
