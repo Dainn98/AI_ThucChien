@@ -1,0 +1,6 @@
+---
+alwaysApply: true
+---
+
+Không cần tạo tailwind.config.js và postcss.config.js
+file index.css phải dùng @import "tailwindcss"; vì đây là tailwind bản mới

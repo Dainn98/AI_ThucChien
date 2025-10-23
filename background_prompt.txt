@@ -1,0 +1,67 @@
+**Prompt for AI Image Generator to Create a Homepage Background**
+
+**Theme:** Children's Educational Game
+
+**Core Idea:** A vibrant, cheerful, and inviting landscape that sparks curiosity and joy in young learners. The background should be clean and have enough negative space for UI elements like buttons and text.
+
+---
+
+**Detailed Prompt (Option 1 - Playful Landscape):**
+
+"A vibrant and cheerful cartoon landscape background for a children's educational game homepage. The style is a clean, flat vector illustration with soft, rounded shapes and a friendly aesthetic.
+
+The scene depicts rolling green hills under a bright, light-blue sky with a smiling sun and fluffy, cartoonish clouds. Dotted across the landscape are subtle educational elements: a few colorful alphabet blocks (A, B, C), some simple numbers (1, 2, 3) integrated into the hills, and perhaps a friendly cartoon animal like a giraffe or a lion peeking from behind a stylized tree.
+
+The composition should be minimalistic and uncluttered, leaving the upper-middle and center areas relatively open to accommodate the game's title, menu buttons, and main characters.
+
+**Color Palette:** Bright and soft pastel colors - sunny yellows, sky blues, grassy greens, and gentle oranges.
+**Mood:** Happy, inviting, playful, and educational.
+**Aspect Ratio:** 16:9
+**Negative Space:** High importance, especially in the center.
+"
+
+---
+
+**Detailed Prompt (Option 2 - Abstract & Fun):**
+
+"An abstract, playful, and colorful background for a kids' game UI. The style is a gentle, 2D vector graphic with layered, soft-edged shapes.
+
+The design features a pattern of oversized, simple geometric shapes like circles, triangles, and stars, combined with fun doodles like squiggles, dots, and plus signs. The elements are scattered playfully across the canvas, creating a sense of fun and creativity. The colors should be bright but not overwhelming.
+
+The composition should be balanced, with a less dense pattern in the center to ensure text and buttons are easily readable.
+
+**Color Palette:** A vibrant mix of primary and secondary colors like teal, magenta, yellow, and orange, on a soft off-white or light-blue base.
+**Mood:** Energetic, creative, and modern.
+**Aspect Ratio:** 16:9
+"
+
+---
+
+**Detailed Prompt (Level 2 - The Wise Canteen):**
+
+"A bright, clean, and friendly school canteen background for a children's educational game. The style is a simple, colorful cartoon with clear lines and a cheerful atmosphere, consistent with the game's food safety theme.
+
+The scene depicts a school cafeteria counter. On the counter, there are shelves and trays, but they are mostly empty to provide a clean canvas for the drag-and-drop game items. In the background, you can see a few tables and chairs, and perhaps a window looking out onto a sunny playground. The overall environment should look hygienic and well-organized.
+
+The composition must be very clean and uncluttered, with the main focus on the counter area. This space needs to be clear to serve as the main gameplay area where items will be dragged and dropped into 'safe' and 'unsafe' zones.
+
+**Color Palette:** Bright and welcoming colors like light blues, sunny yellows, and clean whites, with some primary color accents on the furniture.
+**Mood:** Orderly, safe, and educational.
+**Aspect Ratio:** 16:9
+**Negative Space:** Very high importance, especially on the counter and shelves.
+"
+
+---
+
+**Detailed Prompt (Level 3 - Little Supermarket):**
+
+"A colorful and detailed supermarket aisle background for a children's 'spot the difference' game. The style is a clean, appealing cartoon illustration.
+
+The scene shows a well-stocked supermarket aisle. One side has a refrigerated section with milk, yogurt, and meats. The other side has shelves with fresh produce like fruits and vegetables. The aisle should look mostly correct and safe, but with specific, designated areas where food safety 'mistakes' can be illustrated (e.g., a space on the vegetable shelf where raw meat could be placed, a spot for a bulging milk carton, a place for moldy fruit).
+
+The composition should be a straight-on view of the aisle, making it easy for children to scan for differences. The lighting is bright and even.
+
+**Color Palette:** A rainbow of colors from the fresh produce, with clean whites and blues for the refrigerated sections.
+**Mood:** Realistic, educational, and engaging.
+**Aspect Ratio:** 16:9
+"
