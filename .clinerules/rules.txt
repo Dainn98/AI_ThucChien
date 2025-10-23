@@ -1,0 +1,85 @@
+language: JavaScript
+framework: ReactJS
+typescript: false
+build_tool: Vite
+routing: react-router-dom
+state_management: useState + useEffect + Context API (no Redux)
+
+Môi trường phát triển là Window 11, hãy ưu tiên sử dụng lệnh PS hoặc cmd.
+Nếu chưa có project hãy tạo bằng lệnh:
+npm create vite@latest
+Project name: < Đặt theo đề bài >
+framework : React
+variant : JavaScript
+No rolldown-vite
+nếu muốn kiểm tra, hãy chạy npm run dev.
+
+# Cài đặt TailwindCSS
+Chạy lệnh
+npm install tailwindcss @tailwindcss/vite
+file vite.config.js sửa thành
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+
+Không cần thêm file gì, chỉ cần thêm @import "tailwindcss"; vào file CSS cần thiết là dùng được tailwind.
+
+Cài đặt antd và antd icon
+npm instal antd @ant-design/icons@5.x --save
+
+Quy định về style:
+styling:
+  library: TailwindCSS
+  principles:
+    - use utility-first classes (e.g. p-4, text-gray-700, rounded-lg)
+    - follow spacing scale (1, 2, 4, 8, 16)
+    - prefer flex/grid layout for responsive design
+    - use consistent border-radius (rounded-xl)
+    - use shadow-md or shadow-lg for depth
+  theme:
+    font_family: "Inter, Poppins, sans-serif"
+    primary_color: "#2563eb"
+    background_color: "#f9fafb"
+    text_color: "#111827"
+    dark_mode: optional (use 'dark:' prefix)
+
+ui_library:
+  library: Ant Design
+  usage_rules:
+    - prefer Ant Design components for form, table, modal, and layout
+    - override minimal styling via Tailwind, not CSS file
+    - import components selectively (avoid importing all)
+    - follow Ant Design 5+ syntax
+  examples:
+    - Button, Card, Layout, Menu, Table, Modal, Form, Input, Select, DatePicker
+
+icons:
+  library: @ant-design/icons
+  usage_rules:
+    - import icons individually (e.g., import { CalendarOutlined } from "@ant-design/icons")
+    - icon size controlled via Tailwind (e.g., text-xl, text-2xl)
+    - prefer outlined variant
+    - consistent color with text (text-gray-600 or text-primary)
+
+src/
+  ├── components/        # Reusable UI components (Card, Navbar, Footer, etc.)
+  ├── pages/             # Route-based pages (Home, EventDetail, About, etc.)
+  ├── layouts/           # Layout components (MainLayout, AuthLayout)
+  ├── hooks/             # Custom hooks
+  ├── services/          # API integration (axios setup)
+  ├── assets/            # Images, icons, etc.
+  ├── App.jsx
+  ├── main.jsx
+  └── index.css
+
+
+## Một số lưu ý:
+- Dùng ; thay vì && nếu muốn exe nhiều lệnh
+Khi dùng mkdir để tạo folder / file thì :
+-Dùng dấu gạch chéo xuôi / thay vì \
+- Không cần mặc định import React from "react"; vì React đây là bản mới hơn.
