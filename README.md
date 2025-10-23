@@ -1,16 +1,67 @@
-# React + Vite
+# Bé Vui Học - Educational Game for Kids
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an interactive educational game designed for children, built with React and Vite. The game aims to make learning fun through a series of engaging levels and questions.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Interactive Gameplay:** Engaging drag-and-drop and selection-based questions.
+-   **Multiple Levels:** Different levels with varying difficulty to keep children engaged.
+-   **Responsive Design:** A clean and responsive user interface that works on different devices.
+-   **Engaging Visuals:** Colorful assets and a friendly mascot to guide children through the game.
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Frontend:** React.js, Vite
+-   **Styling:** TailwindCSS, Ant Design
+-   **Routing:** React Router DOM
+-   **Drag & Drop:** React DnD
+-   **Animations:** Framer Motion
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
+
+### Installation
+
+1.  Clone the repository:
+    ```sh
+    git clone https://github.com/Dainn98/AI_ThucChien.git
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd AI_ThucChien
+    ```
+3.  Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+### Running the Application
+
+To run the application in development mode, execute the following command:
+
+```sh
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) (or the port specified in your terminal) to view it in the browser.
+
+## 📁 Project Structure
+
+The project follows a standard React project structure:
+
+```
+src/
+├── assets/         # Images, icons, etc.
+├── components/     # Reusable UI components
+├── hooks/          # Custom hooks
+├── layouts/        # Layout components (MainLayout, etc.)
+├── pages/          # Route-based pages (HomePage, GamePage, etc.)
+├── services/       # API integration and data services
+├── App.jsx         # Main application component
+├── main.jsx        # Entry point of the application
+└── index.css       # Global styles
